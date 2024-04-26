@@ -1,0 +1,26 @@
+$colors = @{
+    "Command" = "#47433e"
+    "Comment" = "#787154"
+    "ContinuationPrompt" = "#787154"
+    "Emphasis" = "#3d588f"
+    "Error" = "#862d34"
+    "InlinePrediction" = "#787154"
+    "Keyword" = "#666666"
+    #"ListPrediction" = "#"
+    #"ListPredictionSelected" = "#"
+    #"ListPredictionTooltip" = "#"
+    #"Member" = "#"
+    "Number" = "#47433e"
+    #"Operator" = "#"
+    #"Parameter" = "#"
+    #"Selection" = "#"
+    "String" = "#3e743e"
+    "Type" = "#47433e"
+    "Variable" = "#ad4e1f"
+    "Default" = "#47433e"
+}
+
+Set-PSReadLineOption -Colors $colors
+
+
+

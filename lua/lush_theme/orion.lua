@@ -32,7 +32,7 @@ local palette = {
 	bright_white = hsl(48, 18, 100),
 
     grey   = hsl(0, 0, 40),
-	orange = hsl(30, 60, 40),
+	orange = hsl(20, 70, 40),
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
@@ -183,7 +183,7 @@ local theme = lush(function(injected_functions)
 
 		-- Underlined     { gui = "underline" }, -- Text that stands out, HTML links
 		-- Ignore         { }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
-		-- Error          { }, -- Any erroneous construct
+		Error          { fg=palette.lightest, bg=palette.red }, -- Any erroneous construct
 		-- Todo           { }, -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 		-- These groups are for the native LSP client and diagnostic system. Some
@@ -258,7 +258,7 @@ local theme = lush(function(injected_functions)
         sym"@comment.todo"      { bg=palette.cyan, fg=palette.light}, -- Comment
         sym"@comment.note"      { bg=palette.blue, fg=palette.light}, -- Comment
 
-		-- sym"@punctuation"       { }, -- Delimiter
+		sym"@punctuation"       { fg=palette.darkest }, -- Delimiter
 		-- sym"@constant"          { }, -- Constant
 		-- sym"@constant.builtin"  { }, -- Special
 		-- sym"@constant.macro"    { }, -- Define
@@ -278,12 +278,12 @@ local theme = lush(function(injected_functions)
 		-- sym"@parameter"         { }, -- Identifier
 		-- sym"@method"            { }, -- Function
 		-- sym"@field"             { }, -- Identifier
-		-- sym"@property"          { }, -- Identifier
+        sym"@property" { fg=palette.darkest }, -- Identifier
 		-- sym"@constructor"       { }, -- Special
 		-- sym"@conditional"       { }, -- Conditional
 		-- sym"@repeat"            { }, -- Repeat
 		-- sym"@label"             { }, -- Label
-		-- sym"@operator"          { }, -- Operator
+		sym"@operator"          { fg=palette.darkest }, -- Operator
 		sym"@keyword"           { fg=palette.blue }, -- Keyword
 
         sym"@keyword.conditional"  { fg=palette.cyan },  -- if, then, else, endif, switch
@@ -294,7 +294,7 @@ local theme = lush(function(injected_functions)
 
         sym"@keyword.directive"    { fg=palette.magenta},  -- for, do, while, etc.
 
-		-- sym"@variable"          { }, -- Identifier
+		sym"@variable"              { fg=palette.darkest }, -- Identifier
 		-- sym"@type"              { }, -- Type
 		-- sym"@type.definition"   { }, -- Typedef
 		-- sym"@storageclass"      { }, -- StorageClass
