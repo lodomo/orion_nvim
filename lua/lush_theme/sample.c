@@ -17,6 +17,8 @@ int main() {
 
     ptr = malloc(10 * sizeof(int));
 
+    // TODO
+
     // Something from stdlib.h
     printf("Random number: %d\n", rand());
 
