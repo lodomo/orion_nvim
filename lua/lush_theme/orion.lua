@@ -386,17 +386,18 @@ local theme = lush(function(injected_functions)
         --@comment.note           note-type comments (e.g. `NOTE`, `INFO`, `XXX`)
         --
         --@markup.strong          bold text
+        sym"@markup.strong" { fg=palette.cyan, gui="bold" }, -- strong text
+        sym"@markup.italic" { fg=palette.magenta, gui="italic" }, -- italic text
         --@markup.italic          italic text
         --@markup.strikethrough   struck-through text
         --@markup.underline       underlined text (only for literal underline markup!)
         --
-        --@markup.heading         headings, titles (including markers)
-        --@markup.heading.1       top-level heading
-        --@markup.heading.2       section heading
-        --@markup.heading.3       subsection heading
-        --@markup.heading.4       and so on
-        --@markup.heading.5       and so forth
-        --@markup.heading.6       six levels ought to be enough for anybody
+        sym"@markup.heading.1" { fg=palette.red, gui="bold" }, -- top-level heading
+        sym"@markup.heading.2" { fg=palette.orange, gui="bold" }, -- section heading
+        sym"@markup.heading.3" { fg=palette.yellow, gui="bold" }, -- subsection heading
+        sym"@markup.heading.4" { fg=palette.green, gui="bold" }, -- and so on
+        sym"@markup.heading.5" { fg=palette.blue, gui="bold" }, -- and so forth
+        sym"@markup.heading.6" { fg=palette.magenta, gui="bold" }, -- six levels ought to be enough for anybody
         --
         --@markup.quote           block quotes
         --@markup.math            math environments (e.g. `$ ... $` in LaTeX)
@@ -404,14 +405,19 @@ local theme = lush(function(injected_functions)
         --@markup.link            text references, footnotes, citations, etc.
         --@markup.link.label      link, reference descriptions
         --@markup.link.url        URL-style links
+        sym"@markup.link.url" { fg=palette.blue, gui="underline" }, -- URL-style links
         --
         --@markup.raw             literal or verbatim text (e.g. inline code)
         --@markup.raw.block       literal or verbatim text as a stand-alone block
         --
         --@markup.list            list markers
+        sym"@markup.list" { fg=palette.cyan, gui="bold" }, -- list items
         --@markup.list.checked    checked todo-style list markers
+        sym"@markup.list.checked" { fg=palette.green, gui="bold strikethrough" }, -- checked todo-style list markers
         --@markup.list.unchecked  unchecked todo-style list markers
+        sym"@markup.list.unchecked" { fg=palette.orange, gui="bold" }, -- unchecked todo-style list markers
         --
+        sym"@markup.quote" { fg=palette.darker }, -- block quotes
         --@diff.plus              added text (for diff files)
         --@diff.minus             deleted text (for diff files)
         --@diff.delta             changed text (for diff files)
@@ -433,6 +439,9 @@ local theme = lush(function(injected_functions)
         -- NeoTreeGitStaged        { }, -- For files marked as staged by Git.
         -- NeoTreeGitUnmerged      { }, -- For files marked as unmerged by Git.
         -- NeoTreeGitRenamed       { }, -- For files marked as renamed by Git.
+        --
+        -- Format for markdown
+        markdownBold { fg=palette.blue, gui="bold" },
 	}
 end)
 
