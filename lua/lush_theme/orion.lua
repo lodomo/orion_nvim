@@ -439,6 +439,7 @@ local theme = lush(function(injected_functions)
         -- NeoTreeGitStaged        { }, -- For files marked as staged by Git.
         -- NeoTreeGitUnmerged      { }, -- For files marked as unmerged by Git.
         -- NeoTreeGitRenamed       { }, -- For files marked as renamed by Git.
+        NeoTreeGitUntracked     { fg=palette.magenta, gui="italic" }, -- For files marked as untracked by Git.
         --
         -- Format for markdown
         markdownBold { fg=palette.blue, gui="bold" },
