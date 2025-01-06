@@ -395,10 +395,10 @@ local theme = lush(function(injected_functions)
         --
         sym"@markup.heading.1" { fg=palette.red, gui="bold" }, -- top-level heading
         sym"@markup.heading.2" { fg=palette.orange, gui="bold" }, -- section heading
-        sym"@markup.heading.3" { fg=palette.yellow, gui="bold" }, -- subsection heading
+        sym"@markup.heading.6" { fg=palette.yellow, gui="bold" }, -- subsection heading
         sym"@markup.heading.4" { fg=palette.green, gui="bold" }, -- and so on
         sym"@markup.heading.5" { fg=palette.blue, gui="bold" }, -- and so forth
-        sym"@markup.heading.6" { fg=palette.magenta, gui="bold" }, -- six levels ought to be enough for anybody
+        sym"@markup.heading.3" { fg=palette.magenta, gui="bold" }, -- six levels ought to be enough for anybody
         --
         --@markup.quote           block quotes
         --@markup.math            math environments (e.g. `$ ... $` in LaTeX)
